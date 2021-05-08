@@ -9,7 +9,7 @@ const NotFoundPage = () => (
         <span>404</span>
         <h3>Error page</h3>
         <Link to={`/`} className="btn">
-          Back Home
+          back to Homepage
         </Link>
       </div>
     </section>
