@@ -4,8 +4,7 @@
      xmlns:inkscape="https://www.inkscape.org/namespaces/inkscape" width="381.18181944287517" height="81.6363634261875"
      style="" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="https://svg-edit.googlecode.com ">
-    <title>my vector image</title>
-    <!-- Created with Vector Paint - https://www.vectorpaint.yaks.com/ https://chrome.google.com/webstore/detail/hnbpdiengicdefcjecjbnjnoifekhgdo -->
+    <title>Gatsby MDX logo</title>
     <rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="#FFFFFF" stroke="none" class="" style=""/>
     <g style="" class="currentLayer">
         <title>Layer 1</title>
@@ -43,20 +42,6 @@
                        fill-rule="nonzero" font-size="100" font-family="Georgia, serif" letter-spacing="0"
                        word-spacing="0" marker-start="" marker-mid="" marker-end="" id="svg_9" x="358" y="49" width="0"
                        height="3" style="color: rgb(0, 0, 0);">
-            <p xmlns="https://www.w3.org/1999/xhtml">
-                <p xmlns="https://www.w3.org/1999/xhtml"></p>
-                <p xmlns="https://www.w3.org/1999/xhtml">text</p>
-                <p></p>
-            </p>
-        </foreignObject>
-        <path fill="#d5d50b" fill-opacity="1" stroke="#0b0bd5" stroke-opacity="1" stroke-width="2"
-              stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset=""
-              fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" id="svg_11"
-              d="M49.65701616596138,48.67769198212139 " style="color: rgb(0, 0, 0);"/>
-        <foreignObject fill="#d5d50b" stroke="#0b0bd5" stroke-width="2" stroke-linejoin="round" stroke-dashoffset=""
-                       fill-rule="nonzero" font-size="100" font-family="Georgia, serif" letter-spacing="0"
-                       word-spacing="0" marker-start="" marker-mid="" marker-end="" id="svg_13" x="33" y="50"
-                       width="110" height="31" style="color: rgb(0, 0, 0);">
             <p xmlns="https://www.w3.org/1999/xhtml">
                 <p xmlns="https://www.w3.org/1999/xhtml"></p>
                 <p xmlns="https://www.w3.org/1999/xhtml">text</p>

@@ -10,13 +10,13 @@ import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <h2>layout component</h2>
-      <main>{children}</main>
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+    <Navbar />
+    {/*<Sidebar />*/}
+    <main>{children}</main>
+    {/*<Footer />*/}
+  </>
+)
 
 export default Layout
