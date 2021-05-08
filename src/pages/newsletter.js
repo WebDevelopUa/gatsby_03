@@ -8,7 +8,12 @@ const NewsLetter = () => {
         <div className="page-center">
           <h2>Just subscribe!</h2>
           <h4>enter you name & email</h4>
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            name="contact"
+            netlify
+            action="/success"
+          >
             <input
               type="text"
               name="name"

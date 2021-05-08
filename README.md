@@ -2,11 +2,11 @@
 
 ### Pet-project Blog generated using [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default) & MDX
 
-## [DEMO link of Frontend](https://xxx.netlify.app/) deployed on Netlify
+## [DEMO link of Frontend](https://gatsby-v3-mdx.netlify.app/) deployed on Netlify
 
 - Image From External (CDN) Media Storage At [Cloudinary](https://cloudinary.com/)
 - Backend for Content => [GitHub repo](https://github.com/...)
-- [Frontend](https://gatsby-v3-strapi-frontend.netlify.app) deployed on Netlify => `public` folder
+- [Frontend](https://gatsby-v3-mdx.netlify.app/) deployed on Netlify => `public` folder
 
 > [localhost:8000](http://localhost:8000) version of Frontend requires [localhost:1337](http://localhost:1337) => run Backend: [Back-end GitHub repo](https://github.com/WebDevelopUa/gatsby_02-strapi_api)
 
@@ -30,13 +30,14 @@
 - **_[Completely Free online photo editing](https://www10.lunapic.com/editor/)_**
 - [Favicon](https://favicon.io/favicon-generator/)
 - [Inkscape](https://inkscape.org/release/inkscape-1.0.2/)
+- [Netlify Forms setup](https://docs.netlify.com/forms/setup/)
 
 ---
 
 Requirements:
 
 - [Node.js](https://nodejs.org/uk/)
-- [Netlify](https://www.netlify.com)
+- [Netlify](https://www.netlify.com) - Frontend site + [Newsletter Form](https://app.netlify.com/sites/gatsby-v3-mdx/forms)
 
 ---
 
@@ -61,6 +62,29 @@ gatsby develop
 
 - [localhost:8000](http://localhost:8000)
 - [localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql)
+
+---
+
+## Netlify Newsletter
+
+Code an HTML form into any page on your site, add a netlify attribute to the 
+`<form> `tag, and you’ll receive submissions in your Netlify dashboard. 
+HTML files are parsed directly at deploy time, so there’s no need for you to 
+make an API call or include extra JavaScript on your site.
+
+```
+<form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+```
 
 ---
 
