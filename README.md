@@ -26,6 +26,7 @@
 - [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/)
 - [Adding an Seo Component](https://www.gatsbyjs.com/docs/add-seo-component/)
 - **_[Pexels stock photos](https://www.pexels.com/)_**
+- **_[PNG photos](https://www.pngitem.com/middle/ixxhTbw_planet-and-space-png-cartoon-transparent-png/)_**
 - **_[Completely Free online photo editing](https://www10.lunapic.com/editor/)_**
 - [Favicon](https://favicon.io/favicon-generator/)
 - [Inkscape](https://inkscape.org/release/inkscape-1.0.2/)

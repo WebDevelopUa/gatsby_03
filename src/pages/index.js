@@ -6,6 +6,12 @@ import { graphql } from 'gatsby'
 import SEO from '../components/SEO'
 // ...GatsbyImageSharpFluid
 
-const IndexPage = () => <Layout></Layout>
+const IndexPage = () => {
+  return (
+    <Layout>
+      <Hero showPerson />
+    </Layout>
+  )
+}
 
 export default IndexPage
