@@ -10,9 +10,12 @@ const NewsLetter = () => {
           <h4>enter you name & email</h4>
           <form
             className="contact-form"
-            name="contact"
-            netlify
+            name="newsletter-submission"
+            netlify-honeypot="bot-field"
+            method="POST"
+            data-netlify="true"
             action="/success"
+            netlify
           >
             <input
               type="text"
@@ -27,6 +30,12 @@ const NewsLetter = () => {
               placeholder="Your email"
               className="form-control"
               required
+            />
+            <input type="hidden" name="bot-field" />
+            <input
+              type="hidden"
+              name="form-name"
+              value="newsletter-submission"
             />
             <button type="submit" className="btn form-control submit-btn">
               Subscribe

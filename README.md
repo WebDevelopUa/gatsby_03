@@ -67,23 +67,44 @@ gatsby develop
 
 ## Netlify Newsletter
 
-Code an HTML form into any page on your site, add a netlify attribute to the 
-`<form> `tag, and you’ll receive submissions in your Netlify dashboard. 
-HTML files are parsed directly at deploy time, so there’s no need for you to 
+Code an HTML form into any page on your site, add a netlify attribute to the
+`<form> `tag, and you’ll receive submissions in your Netlify dashboard.
+HTML files are parsed directly at deploy time, so there’s no need for you to
 make an API call or include extra JavaScript on your site.
 
 ```
-<form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+ <form
+    className="contact-form"
+    name="newsletter-submission"
+    netlify-honeypot="bot-field"
+    method="POST"
+    data-netlify="true"
+    action="/success"
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Your name"
+      className="form-control"
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Your email"
+      className="form-control"
+      required
+    />
+    <input type="hidden" name="bot-field" />
+    <input
+      type="hidden"
+      name="form-name"
+      value="newsletter-submission"
+    />
+    <button type="submit" className="btn form-control submit-btn">
+      Subscribe
+    </button>
+  </form>
 ```
 
 ---
