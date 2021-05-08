@@ -9,7 +9,7 @@ const Navbar = ({ toggle }) => (
   <nav className="navbar">
     <div className="nav-center">
       <div className="nav-header">
-        <Link to={`/home`} className="nav-logo">
+        <Link to={`/`} className="nav-logo">
           <img src={logo} alt="mdx logo" />
         </Link>
         <button className="toggle-btn" onClick={toggle}>
