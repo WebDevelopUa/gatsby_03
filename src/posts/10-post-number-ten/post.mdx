@@ -1,0 +1,133 @@
+---
+title: Gatsby MDX
+slug: Gatsby MDX
+image: ./images/gatsby.png
+date: 2021-05-10
+author: Gatsby Man
+category: gatsby
+readTime: 2
+---
+
+import { Link } from 'gatsby'
+import Hero from '../../components/Hero'
+import { FaInfo } from 'react-icons/fa'
+import { Counter, LikeButton } from '../../components/PostComponents'
+
+_excerpt #10 hola musica_ si senior por favor
+
+<blockquote>
+  Lorem ipsum. Man bun shaman yr, bushwick fam hammock williamsburg kombucha
+  keytar VHS. Chambray street art authentic,
+</blockquote>
+
+<blockquote display="info">
+  Sum ipsum tumblr fanny pack tousled seitan. Man bun shaman yr, bushwick fam
+  hammock williamsburg kombucha keytar VHS. Chambray street art authentic,
+</blockquote>
+
+<Hero showPerson />
+<br /># MDX Page
+
+<div className="nice-text">
+
+<h3>Hi there</h3>
+
+<FaInfo className="nice-text-icon" />
+
+**In eu diam mollis, elementum dui eget, malesuada ligula. Sed mollis lacinia
+felis nec tempor.** Suspendisse non libero non orci semper ullamcorper.
+Vivamus aliquet, tortor sit amet varius vestibulum, lorem sem rutrum felis, et
+molestie erat diam ac justo. Phasellus dapibus est eget quam aliquam dapibus.
+Suspendisse tempor, quam at pretium auctor, nisl lacus luctus sapien, at
+semper leo mi vitae erat. Integer luctus diam in ipsum congue aliquam.
+Maecenas sed odio at purus posuere laoreet. Phasellus imperdiet magna eget sem
+bibendum faucibus. Praesent lectus sapien, congue dapibus tristique a,
+tincidunt id quam. Nullam condimentum eros eget nisi gravida pellentesque.
+Donec nulla felis, porttitor quis bibendum in, lacinia non neque. Sed congue
+commodo lacus quis interdum. Morbi id ligula blandit, lacinia turpis non,
+dapibus ante.
+
+</div>
+<br />
+ Nulla vestibulum ante id nibh feugiat, non auctor diam fermentum. Nam commodo iaculis tortor,
+quis cursus augue porta eu. Praesent vehicula arcu eget sapien auctor fringilla. Vestibulum at pharetra orci.
+Vivamus ac enim turpis. Quisque tempor risus metus, eget euismod est viverra ac.
+
+<br />
+<Counter />
+<br />
+
+<div className="code">
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+</div>
+  <br />
+  <LikeButton />
+  <br />
+
+---
+
+<Link to="/posts" className="btn center-btn">
+  all posts
+</Link>
+
+---
+
+<br />
+
+1. Ut sodales blandit egestas. Vestibulum venenatis odio rutrum feugiat fringilla. Aliquam mauris ante,
+   dictum id condimentum eu, luctus et nisi. Mauris faucibus orci magna. Duis suscipit blandit egestas.
+   Pellentesque convallis orci imperdiet sodales facilisis. Aliquam dapibus massa vitae nulla malesuada posuere.
+   Nam sed odio erat. Praesent in dolor egestas, porta sapien nec, ultrices purus. Pellentesque arcu risus,
+   interdum sit amet ligula lobortis, congue fringilla tortor. Etiam at nibh convallis, bibendum nibh quis,
+   condimentum dolor.
+
+2. Quisque id velit suscipit, efficitur neque eget, vestibulum risus. Etiam sit amet sapien auctor,
+   laoreet purus at, consectetur tellus. Suspendisse at aliquet mi, nec efficitur tortor.
+   Integer vel iaculis tortor. Donec tempor sapien sed convallis finibus. Morbi et felis vitae ante gravida porttitor.
+   Sed erat mauris, finibus sit amet sapien in, interdum dapibus lectus. Phasellus lorem ligula,
+   pretium et tellus placerat, tempus dictum lorem. Ut mauris augue, hendrerit a nulla ac, lacinia aliquet est.
+   Nunc sit amet euismod felis. Aliquam eget egestas diam, sed laoreet dolor.
+
+3. Ut dui dolor, pellentesque at mauris non, vestibulum aliquam justo. Praesent quis ante at justo
+   venenatis varius. Donec nec magna ac neque facilisis rhoncus sit amet eget turpis. Duis fringilla
+   tortor vel venenatis dignissim. Praesent fermentum mi quis mauris sollicitudin, ut fringilla nunc auctor.
+   Mauris justo lacus, dignissim quis semper rhoncus, malesuada eu augue. Vestibulum semper neque ligula,
+   at rhoncus massa blandit a. Suspendisse rutrum ipsum eu congue molestie. Nunc at ante eget velit blandit
+   blandit quis sed dui. Pellentesque tempus nec diam et aliquet. Mauris sed eleifend nibh, at posuere nisl.
+   Vivamus mollis ligula non facilisis vehicula. Integer at lacus pulvinar, dignissim nisi ac, iaculis nulla.
+   Maecenas at volutpat ligula, in semper purus.
+
+<div className="code">
+
+```javascript
+const sum = (a, b) => a + b
+console.log(sum(1, 1))
+```
+
+</div>
+

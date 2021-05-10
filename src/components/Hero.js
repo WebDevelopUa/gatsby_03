@@ -20,7 +20,14 @@ const Hero = ({ showPerson }) => {
   return (
     <header className="hero">
       {showPerson && (
-        <Image fluid={person.childImageSharp.fluid} className="hero-person" />
+        <Image
+          fluid={person.childImageSharp.fluid}
+          className="hero-person"
+          loading="eager"
+          backgroundColor="transparent"
+          durationFadeIn={0}
+          fadeIn={false}
+        />
       )}
     </header>
   )

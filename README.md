@@ -29,8 +29,12 @@
 - **_[PNG photos](https://www.pngitem.com/middle/ixxhTbw_planet-and-space-png-cartoon-transparent-png/)_**
 - **_[Completely Free online photo editing](https://www10.lunapic.com/editor/)_**
 - [Favicon](https://favicon.io/favicon-generator/)
+- [gatsby-image](https://www.gatsbyjs.com/plugins/gatsby-image/) - ⚠️ This package is now deprecated
 - [Inkscape](https://inkscape.org/release/inkscape-1.0.2/)
 - [Netlify Forms setup](https://docs.netlify.com/forms/setup/)
+- [What’s MDX?](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/)
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Styled Components](https://www.gatsbyjs.com/docs/how-to/styling/styled-components/)
 
 ---
 
@@ -123,3 +127,109 @@ make an API call or include extra JavaScript on your site.
 > (node:3700) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./" in the "exports" field module
 > resolution of the package at D:\projects\gatsby_03\node_modules\postcss-js\package.json.
 > Update this package.json to use a subpath pattern like "./\*".
+
+---
+
+# Markdown Cheat Sheet
+
+Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
+
+This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax) and [extended syntax](https://www.markdownguide.org/extended-syntax).
+
+## Basic Syntax
+
+These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
+
+### Heading
+
+# H1
+
+## H2
+
+### H3
+
+### Bold
+
+**bold text**
+
+### Italic
+
+_italicized text_
+
+### Blockquote
+
+> blockquote
+
+### Ordered List
+
+1. First item
+2. Second item
+3. Third item
+
+### Unordered List
+
+- First item
+- Second item
+- Third item
+
+### Code
+
+`code`
+
+### Horizontal Rule
+
+---
+
+### Link
+
+[title](https://www.example.com)
+
+### Image
+
+![alt text](src/assets/person.png)
+
+## Extended Syntax
+
+These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+
+### Table
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
+
+### Fenced Code Block
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+### Footnote
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+### Heading ID
+
+### My Great Heading {#custom-id}
+
+### Definition List
+
+term
+: definition
+
+### Strikethrough
+
+~~The world is flat.~~
+
+### Task List
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
