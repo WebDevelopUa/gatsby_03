@@ -35,6 +35,7 @@
 - [What’s MDX?](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/)
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [Styled Components](https://www.gatsbyjs.com/docs/how-to/styling/styled-components/)
+- [Add components to content using MDX](https://www.gatsbyjs.com/docs/how-to/routing/mdx/)
 
 ---
 
@@ -110,6 +111,29 @@ make an API call or include extra JavaScript on your site.
     </button>
   </form>
 ```
+
+---
+
+## Creating posts dynamically
+
+1. generate GraphQL [query](http://localhost:8000/___graphql?query=query%20MyQuery%20%7B%0A%20%20allMdx%20%7B%0A%20%20%20%20nodes%20%7B%0A%20%20%20%20%20%20frontmatter%20%7B%0A%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&codeExporterIsOpen=false)
+
+```
+query MyQuery {
+  allMdx {
+    nodes {
+      frontmatter {
+        slug
+      }
+    }
+  }
+}
+
+```
+
+2. paste query to [gatsby-node.js](gatsby-node.js)
+3. create [template](src/templates/post-template.js)
+4. use `import { MDXRenderer } from 'gatsby-plugin-mdx'` for `body` content in template
 
 ---
 
