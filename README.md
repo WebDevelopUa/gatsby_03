@@ -116,7 +116,7 @@ make an API call or include extra JavaScript on your site.
 
 ## Creating posts dynamically
 
-1. generate GraphQL [query](http://localhost:8000/___graphql?query=query%20MyQuery%20%7B%0A%20%20allMdx%20%7B%0A%20%20%20%20nodes%20%7B%0A%20%20%20%20%20%20frontmatter%20%7B%0A%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&codeExporterIsOpen=false)
+1. generate GraphQL [query](http://localhost:8000/___graphql?query=query%20MyQuery%20%7B%0A%20%20allMdx%20%7B%0A%20%20%20%20nodes%20%7B%0A%20%20%20%20%20%20frontmatter%20%7B%0A%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&codeExporterIsOpen=false) for posts
 
 ```
 query MyQuery {
@@ -132,8 +132,22 @@ query MyQuery {
 ```
 
 2. paste query to [gatsby-node.js](gatsby-node.js)
-3. create [template](src/templates/post-template.js)
+3. create [post template](src/templates/post-template.js)
 4. use `import { MDXRenderer } from 'gatsby-plugin-mdx'` for `body` content in template
+5. generate GraphQL [query](<http://localhost:8000/___graphql?query=query%20MyQuery%20%7B%0A%20%20categories%3A%20allMdx%20%7B%0A%20%20%20%20distinct(field%3A%20frontmatter___category)%0A%20%20%7D%0A%7D%0A&operationName=MyQuery>) for posts categories
+
+```
+query MyQuery {
+  categories: allMdx {
+    distinct(field: frontmatter___category)
+  }
+}
+
+```
+
+6.  paste query to [gatsby-node.js](gatsby-node.js)
+7.  create [category template](src/templates/category-template.js)
+8.  restart Gatsby server
 
 ---
 
