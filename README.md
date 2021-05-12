@@ -43,6 +43,7 @@
 - [Add components to content using MDX](https://www.gatsbyjs.com/docs/how-to/routing/mdx/)
 - [Table of components MDX](https://mdxjs.com/table-of-components)
 - [Customizing Markdown Components Gatsby](https://www.gatsbyjs.com/docs/how-to/routing/customizing-components/)
+- [prism-react-renderer](https://www.npmjs.com/package/prism-react-renderer)
 
 ---
 

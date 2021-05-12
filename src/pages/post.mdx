@@ -12,7 +12,7 @@ import { FaInfo } from 'react-icons/fa'
 
 <div className="mdx-img">
 
-![inline image from static folder](android-chrome-512x512.png)
+![inline image from static folder](android-chrome-192x192.png)
 
 </div>
 
@@ -43,7 +43,7 @@ In the processing, it makes images responsive by:
 
 ### How to use
 
-```
+```javascript
 // In your gatsby-config.js
 plugins: [
   `gatsby-plugin-sharp`,
@@ -207,6 +207,122 @@ If an empty alt attribute like alt="" is wished, a reserved keyword GATSBY_EMPTY
   </a>
   Brawny gods just
 </blockquote>
+
+<br />
+<h1>Code blocks styling with Prism react render plugin</h1>
+<br />
+
+#### html
+
+```html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blockquote nice text</title>
+  </head>
+  <body>
+    <div className="nice-text">
+      <h4>
+        Processes images in markdown so they can be used in the production build
+      </h4>
+      <FaInfo className="nice-text-icon" />
+      Some text
+    </div>
+  </body>
+</html>
+```
+
+#### css
+
+```css
+.nice-text {
+  background: var(--clr-primary-10);
+  padding: 2rem 1.5rem;
+  color: var(--clr-grey-1);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--clr-primary-5);
+  position: relative;
+}
+
+.nice-text h4,
+.nice-text p {
+  color: var(--clr-black);
+}
+
+.nice-text p {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .nice-text {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+
+.nice-text-icon {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  background: var(--clr-white);
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 6px solid var(--clr-white);
+  color: var(--clr-primary-5);
+}
+```
+
+#### js
+
+```js
+import React from 'react'
+import { MDXProvider } from '@mdx-js/react'
+import { Blockquote, Code, Headings } from './src/components/PostComponents'
+
+const components = {
+  h2: Headings.myH2,
+  h4: Headings.myH4,
+  inlineCode: Code,
+  blockquote: Blockquote,
+}
+
+export const wrapMDX = ({ element }) => (
+  <MDXProvider components={components}>{element}</MDXProvider>
+)
+```
+
+#### jsx
+
+```jsx
+const IndexPage = ({ data }) => {
+  const {
+    allMdx: { nodes: posts },
+  } = data
+  const titleRecentPosts = `Recent posts`
+
+  return (
+    <Layout>
+      <Hero showPerson />
+      <Posts posts={posts} title={titleRecentPosts} />
+    </Layout>
+  )
+}
+
+export default IndexPage
+```
+
+#### undefined
+
+```
+  {
+    "arrowParens": "avoid",
+    "semi": false,
+    "singleQuote": true
+  }
+
+```
 
 </section>
 

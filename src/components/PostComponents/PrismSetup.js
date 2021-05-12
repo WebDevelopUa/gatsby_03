@@ -1,10 +1,11 @@
 import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/vsDark'
+// import theme from 'prism-react-renderer/themes/vsDark'
+import theme from 'prism-react-renderer/themes/nightOwl'
 import styled from 'styled-components'
 
 const PrismWrapper = props => {
-  const className = props.children.props.className
+  const className = props.children.props.className || `language-undefined`
   const language = className.split('-')[1]
 
   return (
@@ -14,25 +15,24 @@ const PrismWrapper = props => {
       language={language}
       theme={theme}
     >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => {
-        return (
-          <Container>
-            <Pre className={className} style={style}>
-              <div className="code-tab">{language}</div>
-              {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </Pre>
-          </Container>
-        )
-      }}
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <Container>
+          <Pre className={className} style={style}>
+            <div className="code-tab">{language}</div>
+            {tokens.map((line, i) => (
+              <div {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))}
+          </Pre>
+        </Container>
+      )}
     </Highlight>
   )
 }
+
 // Styling Only
 const Pre = styled.pre`
   background: #1e1e1e;
@@ -49,7 +49,7 @@ const Pre = styled.pre`
 
   .code-tab {
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 5%;
     color: rgb(156, 220, 254);
     font-size: 1rem;
@@ -59,7 +59,8 @@ const Pre = styled.pre`
     padding: 0.05rem 0.85rem 0;
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
-    background: #1e1e1e;
+    background: rgb(1, 22, 39);
+    //background: #1e1e1e;
   }
 `
 const Container = styled.article`
