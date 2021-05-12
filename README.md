@@ -40,6 +40,9 @@
 - [Working with Video](https://www.gatsbyjs.com/docs/how-to/images-and-media/working-with-video/)
 - [PropTypes](https://ru.reactjs.org/docs/typechecking-with-proptypes.html)
 - [Config Files](https://www.gatsbyjs.com/docs/reference/config-files/)
+- [Add components to content using MDX](https://www.gatsbyjs.com/docs/how-to/routing/mdx/)
+- [Table of components MDX](https://mdxjs.com/table-of-components)
+- [Customizing Markdown Components Gatsby](https://www.gatsbyjs.com/docs/how-to/routing/customizing-components/)
 
 ---
 
@@ -163,6 +166,26 @@ function **_wrapRootElement_** to wrap App in MDX Provider, that allows to inter
 - [Gatsby Server Rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/)
 
 make changes in [gatsby-browser](gatsby-browser.js) & [gatsby-ssr](gatsby-ssr.js) with logic in [root-mdx](root-mdx.js)
+
+```jsx
+import React from 'react'
+import { MDXProvider } from '@mdx-js/react'
+
+const components = {
+  h2: props => {
+    console.log(props)
+    return <h2 {...props}>{props.children}</h2>
+  },
+}
+
+export const wrapMDX = ({ element }) => (
+  <MDXProvider components={components}>{element}</MDXProvider>
+)
+```
+
+```jsx
+<h2 title="true">random h2</h2>
+```
 
 ---
 
