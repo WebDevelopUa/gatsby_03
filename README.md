@@ -39,6 +39,7 @@
 - [gatsby-remark-images](https://www.gatsbyjs.com/plugins/gatsby-remark-images/)
 - [Working with Video](https://www.gatsbyjs.com/docs/how-to/images-and-media/working-with-video/)
 - [PropTypes](https://ru.reactjs.org/docs/typechecking-with-proptypes.html)
+- [Config Files](https://www.gatsbyjs.com/docs/reference/config-files/)
 
 ---
 
@@ -151,6 +152,17 @@ query MyQuery {
 6.  paste query to [gatsby-node.js](gatsby-node.js)
 7.  create [category template](src/templates/category-template.js)
 8.  restart Gatsby server
+
+---
+
+## [Config Files](https://www.gatsbyjs.com/docs/reference/config-files/)
+
+function **_wrapRootElement_** to wrap App in MDX Provider, that allows to intercept the elements typed in MDX
+
+- [Gatsby Browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/)
+- [Gatsby Server Rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/)
+
+make changes in [gatsby-browser](gatsby-browser.js) & [gatsby-ssr](gatsby-ssr.js) with logic in [root-mdx](root-mdx.js)
 
 ---
 
