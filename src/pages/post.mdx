@@ -1,12 +1,17 @@
+import Layout from '../components/Layout'
+import { RegVideo, Video } from '../components/PostComponents'
+
+<Layout>
+
 <section className="mdx-page">
 
-# MDX Post page
+> MDX Post page
 
 ## inline image from `"static"` folder:
 
 <div className="mdx-img">
 
-  ![inline image from static folder](android-chrome-512x512.png)
+![inline image from static folder](android-chrome-512x512.png)
 
 </div>
 
@@ -73,11 +78,46 @@ If an empty alt attribute like alt="" is wished, a reserved keyword GATSBY_EMPTY
 
 `![GATSBY_EMPTY_ALT](./image.png)`
 
-
 <div className="mdx-img">
 
-  ![inline image from src/assets folder](../assets/banner-about.jpg)
+![inline image from `"src/assets"` folder](../assets/banner-about.jpg)
 
 </div>
 
+<br />
+
+---
+
+<br />
+
+## regular video from `"src/assets"` folder:
+
+<br />
+<br />
+
+<RegVideo />
+
+<br />
+<br />
+
+## iframe video from embed `"url"`:
+
+<br />
+<br />
+
+<Video />
+
+<br />
+<br />
+
+<Video
+  src="https://www.youtube.com/embed/nzgRa-Ff73k"
+  title="Deep Space House Show 001 | Deep House Mix | 2012"
+/>
+
+<br />
+<br />
+
 </section>
+
+</Layout>

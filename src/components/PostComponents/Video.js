@@ -2,33 +2,29 @@ import React from 'react'
 import video from '../../assets/moon-hd.mp4'
 import styled from 'styled-components'
 
-export const RegVideo = () => {
-  return (
-    <RegVideoWrapper>
-      <video controls autoPlay muted loop>
-        <source src={video} type="video/mp4" />
-      </video>
-    </RegVideoWrapper>
-  )
-}
+export const RegVideo = () => (
+  <RegVideoWrapper>
+    <video controls autoPlay muted loop>
+      <source src={video} type="video/mp4" />
+    </video>
+  </RegVideoWrapper>
+)
 
-export const Video = ({ src, title, ...props }) => {
-  return (
-    <IframeVideoWrapper>
-      <div className="video">
-        <iframe
-          src={src}
-          title={title}
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          frameBorder="0"
-          webkitallowfullscreen="true"
-          mozallowfullscreen="true"
-          allowFullScreen
-        />
-      </div>
-    </IframeVideoWrapper>
-  )
-}
+export const Video = ({ src, title, ...props }) => (
+  <IframeVideoWrapper>
+    <div className="video">
+      <iframe
+        src={src}
+        title={title}
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        frameBorder="0"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        allowFullScreen
+      />
+    </div>
+  </IframeVideoWrapper>
+)
 
 const RegVideoWrapper = styled.div`
   width: 90vw;
@@ -69,6 +65,6 @@ const IframeVideoWrapper = styled.div`
 `
 
 Video.defaultProps = {
-  src: 'https://www.youtube.com/embed/-8ORfgUa8ow',
-  title: 'the best html css tutorial ever !',
+  src: 'https://www.youtube.com/embed/eA2UZsUd6rM',
+  title: 'Deep Space House Show 300 | Anniversary Lounge Mix',
 }

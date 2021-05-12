@@ -37,6 +37,8 @@
 - [Styled Components](https://www.gatsbyjs.com/docs/how-to/styling/styled-components/)
 - [Add components to content using MDX](https://www.gatsbyjs.com/docs/how-to/routing/mdx/)
 - [gatsby-remark-images](https://www.gatsbyjs.com/plugins/gatsby-remark-images/)
+- [Working with Video](https://www.gatsbyjs.com/docs/how-to/images-and-media/working-with-video/)
+- [PropTypes](https://ru.reactjs.org/docs/typechecking-with-proptypes.html)
 
 ---
 
