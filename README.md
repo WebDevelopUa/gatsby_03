@@ -36,6 +36,7 @@
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [Styled Components](https://www.gatsbyjs.com/docs/how-to/styling/styled-components/)
 - [Add components to content using MDX](https://www.gatsbyjs.com/docs/how-to/routing/mdx/)
+- [gatsby-remark-images](https://www.gatsbyjs.com/plugins/gatsby-remark-images/)
 
 ---
 

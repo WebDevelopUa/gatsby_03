@@ -1,1 +1,83 @@
-# MDX Post
+<section className="mdx-page">
+
+# MDX Post page
+
+## inline image from `"static"` folder:
+
+<div className="mdx-img">
+
+  ![inline image from static folder](android-chrome-512x512.png)
+
+</div>
+
+**_using [gatsby-remark-images](https://www.gatsbyjs.com/plugins/gatsby-remark-images/) plugin_**
+
+Processes images in markdown so they can be used in the production build.
+
+In the processing, it makes images responsive by:
+
+- Adding an elastic container to hold the size of the image while it loads to avoid layout jumps.
+- Generating multiple versions of images at different widths and sets the srcset and sizes of the img element so regardless of the width of the device, the correct image is downloaded.
+- Using the “blur up” technique popularized by Medium and Facebook where a small 20px wide version of the image is shown as a placeholder until the actual image is downloaded.
+
+<br />
+<br />
+
+### Install
+
+`npm install gatsby-remark-images gatsby-plugin-sharp`
+
+<br />
+<br />
+
+### How to use
+
+```
+// In your gatsby-config.js
+plugins: [
+  `gatsby-plugin-sharp`,
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            // It's important to specify the maxWidth (in pixels) of
+            // the content container as this plugin uses this as the
+            // base for generating different widths of each image.
+            maxWidth: 590,
+          },
+        },
+      ],
+    },
+  },
+]
+```
+
+<br />
+<br />
+
+### Usage in Markdown
+
+<br />
+
+## inline image from `"src/assets"` folder
+
+You can reference an image using the relative path, where that path is relative to the location of the Markdown file you’re typing in.
+
+`![Alt text here](./image.jpg)`
+
+By default, the text Alt text here will be used as the alt attribute of the generated img tag.
+If an empty alt attribute like alt="" is wished, a reserved keyword GATSBY_EMPTY_ALT can be used.
+
+`![GATSBY_EMPTY_ALT](./image.png)`
+
+
+<div className="mdx-img">
+
+  ![inline image from src/assets folder](../assets/banner-about.jpg)
+
+</div>
+
+</section>
