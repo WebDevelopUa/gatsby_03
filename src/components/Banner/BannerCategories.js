@@ -4,8 +4,14 @@ import Categories from '../Categories'
 import Title from './Title'
 
 const BannerCategories = () => {
-  return <Wrapper>Banner Categories</Wrapper>
+  return (
+    <Wrapper>
+      <Title title="categories" />
+      <Categories />
+    </Wrapper>
+  )
 }
+
 const Wrapper = styled.div`
   .category {
     font-size: 1rem;
