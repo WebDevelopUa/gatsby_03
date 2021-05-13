@@ -4,9 +4,7 @@
 
 ## [DEMO link of Frontend](https://gatsby-v3-mdx.netlify.app/) deployed on Netlify
 
-- Image From External (CDN) Media Storage At [Cloudinary](https://cloudinary.com/)
-- Backend for Content => [GitHub repo](https://github.com/...)
-- [Frontend](https://gatsby-v3-mdx.netlify.app/) deployed on Netlify => `public` folder
+- [Frontend](https://gatsby-v3-mdx.netlify.app/) deployed on Netlify => continuous integration from GitHub
 
 > [localhost:8000](http://localhost:8000) version of Frontend requires [localhost:1337](http://localhost:1337) => run Backend: [Back-end GitHub repo](https://github.com/WebDevelopUa/gatsby_02-strapi_api)
 
@@ -18,7 +16,7 @@
 - [Hello world starter](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-hello-world/)
 - [Gatsby Plugin Library](https://www.gatsbyjs.com/plugins/)
 - [React icons](https://react-icons.github.io/react-icons/)
-- [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image)
+- [gatsby-plugin-image](https://www.gatsbyjs.com/plugins/gatsby-plugin-image) - ⚠️ The "fixed" and "fluid" resolvers are now deprecated.
 - [Migrating from gatsby-image to gatsby-plugin-image](https://www.gatsbyjs.com/docs/reference/release-notes/image-migration-guide/)
 - [Gatsby Image plugin](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/#restrictions-on-using-staticimage)
 - [Getting Started with Gatsby](https://strapi.io/documentation/developer-docs/latest/developer-resources/content-api/integrations/gatsby.html#create-a-gatsby-app)
@@ -44,6 +42,10 @@
 - [Table of components MDX](https://mdxjs.com/table-of-components)
 - [Customizing Markdown Components Gatsby](https://www.gatsbyjs.com/docs/how-to/routing/customizing-components/)
 - [prism-react-renderer](https://www.npmjs.com/package/prism-react-renderer)
+- [gatsby-plugin-mdx](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx)
+- [Adding an SEO Component](https://www.gatsbyjs.com/docs/add-seo-component/)
+- [@reach/router](https://www.npmjs.com/package/@reach/router) - ⚠️ - may cause build error (in React17)
+- [reach-router](https://www.npmjs.com/package/@gatsbyjs/reach-router) for React17 (not tested)
 
 ---
 
@@ -205,17 +207,43 @@ export const wrapMDX = ({ element }) => (
 > resolution of the package at D:\projects\gatsby_03\node_modules\postcss-js\package.json.
 > Update this package.json to use a subpath pattern like "./\*".
 
+> ERROR #98124 WEBPACK
+>
+> Generating development JavaScript bundle failed
+>
+> Can't resolve '/srcpagespost.mdx?type=component' in 'D:\projects\gatsby_03\src\pages'
+>
+> If you're trying to use a package make sure that '/srcpagespost.mdx?type=component' is installed.
+> If you're trying to use a local file make sure that the path is correct.
+>
+> File: src\pages\post.mdx:4:0
+>
+> failed Re-building development bundle - 2.369s
+> ERROR in ./src/pages/post.mdx 4:0-60
+> Module not found: Error: Can't resolve '/srcpagespost.mdx?type=component'
+> in 'D:\projects\gatsby*03\src\pages'
+> @ ./.cache/\_this_is_virtual_fs_path*/$virtual/async-requires.js 31:11-33:5
+> @ ./.cache/app.js 17:0-52 30:0-86 32:27-40 30:0-86
+>
+> webpack compiled with 1 error
+>
+> Process finished with exit code 1
+
 ---
 
 # Markdown Cheat Sheet
 
 Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
 
-This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax) and [extended syntax](https://www.markdownguide.org/extended-syntax).
+This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. 
+It can’t cover every edge case, so if you need more information about any of these elements, 
+refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax) 
+and [extended syntax](https://www.markdownguide.org/extended-syntax).
 
 ## Basic Syntax
 
-These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
+These are the elements outlined in John Grubber’s original design document. 
+All Markdown applications support these elements.
 
 ### Heading
 
