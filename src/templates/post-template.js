@@ -6,6 +6,7 @@ import Image from 'gatsby-image'
 import Banner from '../components/Banner'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Seo from '../components/Seo'
 
 export const query = graphql`
   query GetSinglePost($slug: String) {
@@ -39,6 +40,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title={`${title.toUpperCase()} Post Page`} />
       <Hero />
       <Wrapper>
         <article>

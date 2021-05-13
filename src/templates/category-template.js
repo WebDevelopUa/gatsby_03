@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Posts from '../components/Posts'
 import { graphql } from 'gatsby'
+import Seo from '../components/Seo'
 
 export const query = graphql`
   query GetCategories($category: String) {
@@ -44,6 +45,7 @@ const CategoryTemplate = props => {
 
   return (
     <Layout>
+      <Seo title={`${category.toUpperCase()} Category Page`} />
       <Hero />
       <Posts posts={posts} title={`${category} category`} />
     </Layout>

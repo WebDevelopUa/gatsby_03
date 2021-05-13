@@ -42,7 +42,7 @@
 - [Customizing Markdown Components Gatsby](https://www.gatsbyjs.com/docs/how-to/routing/customizing-components/)
 - [prism-react-renderer](https://www.npmjs.com/package/prism-react-renderer)
 - [gatsby-plugin-mdx](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx)
-- [Adding an SEO Component](https://www.gatsbyjs.com/docs/add-seo-component/)
+- [Adding an Seo Component](https://www.gatsbyjs.com/docs/add-seo-component/)
 - [@reach/router](https://www.npmjs.com/package/@reach/router) - ⚠️ - may cause build error (in React17)
 - [reach-router](https://www.npmjs.com/package/@gatsbyjs/reach-router) for React17 (not tested)
 
@@ -194,6 +194,8 @@ export const wrapMDX = ({ element }) => (
 # Errors
 
 ##### to avoid deployment errors => delete `package-lock.json`
+
+Netlify => Published deploy => Stop auto publishing => Publish Deploy
 
 > `npm i gatsby-plugin-offline`
 >

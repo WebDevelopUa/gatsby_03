@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import { graphql } from 'gatsby'
 import Posts from '../components/Posts'
+import Seo from '../components/Seo'
 
 export const query = graphql`
   {
@@ -38,6 +39,7 @@ const PostsPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title="All Posts Page" />
       <Hero />
       <Posts posts={posts} title={titleAllPosts} />
     </Layout>
