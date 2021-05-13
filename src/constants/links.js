@@ -20,8 +20,8 @@ const Links = ({ styleClass, children }) => (
       </Link>
     </li>
     <li>
-      <Link to="/post" className="page-link">
-        Post Item
+      <Link to="/posts/maldives" className="page-link">
+        Post Item of Maldives
       </Link>
     </li>
   </ul>
