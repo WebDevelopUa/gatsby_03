@@ -5,8 +5,7 @@
 ## [DEMO link of Frontend](https://gatsby-v3-mdx.netlify.app/) deployed on Netlify
 
 - [Frontend](https://gatsby-v3-mdx.netlify.app/) deployed on Netlify => continuous integration from GitHub
-
-> [localhost:8000](http://localhost:8000) version of Frontend requires [localhost:1337](http://localhost:1337) => run Backend: [Back-end GitHub repo](https://github.com/WebDevelopUa/gatsby_02-strapi_api)
+- [Frontend](https://gatsby-03.vercel.app) deployed on Vercel => continuous integration from GitHub
 
 ---
 
@@ -194,6 +193,8 @@ export const wrapMDX = ({ element }) => (
 
 # Errors
 
+##### to avoid deployment errors => delete `package-lock.json`
+
 > `npm i gatsby-plugin-offline`
 >
 > npm WARN deprecated core-js@2.6.12: core-js@<3.3 is no longer maintained and not recommended for usage due to the number
@@ -235,14 +236,14 @@ export const wrapMDX = ({ element }) => (
 
 Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
 
-This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. 
-It can’t cover every edge case, so if you need more information about any of these elements, 
-refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax) 
+This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements.
+It can’t cover every edge case, so if you need more information about any of these elements,
+refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax)
 and [extended syntax](https://www.markdownguide.org/extended-syntax).
 
 ## Basic Syntax
 
-These are the elements outlined in John Grubber’s original design document. 
+These are the elements outlined in John Grubber’s original design document.
 All Markdown applications support these elements.
 
 ### Heading

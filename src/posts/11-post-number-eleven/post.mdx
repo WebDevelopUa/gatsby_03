@@ -1,0 +1,47 @@
+---
+title: Test MDX
+slug: test-mdx
+image: ./images/mouse.png
+date: 2021-03-10
+author: Mickey Mouse
+category: mouse
+readTime: 2
+---
+
+import { Link } from 'gatsby'
+import { FaInfo } from 'react-icons/fa'
+import { RegVideo, Video } from '../../components/PostComponents'
+
+_excerpt #11 Mickey Mouse_ hello everybody
+
+<section className="mdx-page">
+
+> MDX Post page
+
+## inline image from `"static"` folder:
+
+<div className="mdx-img">
+
+![inline image from static folder](../android-chrome-192x192.png)
+
+</div>
+
+**_using [gatsby-remark-images](https://www.gatsbyjs.com/plugins/gatsby-remark-images/) plugin_**
+
+<div className="nice-text">
+  <h4>
+    Processes images in markdown so they can be used in the production build
+  </h4>
+  <FaInfo className="nice-text-icon" />
+
+In the processing, it makes images responsive by:
+
+- Adding an elastic container to hold the size of the image while it loads to avoid layout jumps.
+- Generating multiple versions of images at different widths and sets the srcset and sizes of the img element so regardless of the width of the device, the correct image is downloaded.
+- Using the “blur up” technique popularized by Medium and Facebook where a small 20px wide version of the image is shown as a placeholder until the actual image is downloaded.
+
+</div>
+<br />
+<br />
+
+</section>
